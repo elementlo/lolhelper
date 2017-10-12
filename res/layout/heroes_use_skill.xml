@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+		   <TextView
+		        android:id="@+id/textview_heroes_op_skill"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:padding="7dp"
+				android:textSize="14sp"
+				android:textColor="#f7f7f7"
+				android:background="@drawable/div_style_00"/>
+
+		   <TextView
+		        android:id="@+id/textview_heroes_teamwork"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:padding="7dp"
+				android:textSize="14sp"
+				android:textColor="#f7f7f7"
+				android:layout_below="@+id/textview_heroes_op_skill"
+				android:background="@drawable/div_style_01"/>
+		   
+		 	<TextView
+		        android:id="@+id/textview_heroes_use_skuill"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:padding="7dp"
+				android:textSize="14sp"
+				android:textColor="#f7f7f7"
+				android:layout_below="@+id/textview_heroes_teamwork"
+				android:background="@drawable/div_style_00"/>
+		 	
+		 	<TextView
+		        android:id="@+id/textview_heroes_ag_skill"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:padding="7dp"
+				android:textSize="14sp"
+				android:textColor="#f7f7f7"
+				android:layout_below="@+id/textview_heroes_use_skuill"
+				android:background="@drawable/div_style_01"/>
+
+</RelativeLayout>

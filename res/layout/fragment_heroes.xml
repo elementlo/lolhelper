@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#151515">
+
+    <!-- 英雄列表布局 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+	    <LinearLayout 
+	        android:id="@+id/linearlayout_heroes_list_sorta"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center"
+	        android:background="@drawable/div_style_top">
+	        
+	        <TextView
+	            android:id="@+id/textview_heroes_list_heroes_type"
+				android:layout_width="0dp" 
+				android:layout_weight="1"
+				android:layout_height="45dp"
+				android:gravity="center"
+				android:textColor="#176444"
+				android:textSize="16sp"
+				android:text="@string/heroes_type"/>
+	        
+	        <TextView
+	            android:id="@+id/textview_heroes_list_seat"
+				android:layout_width="0dp" 
+				android:layout_weight="1"
+				android:layout_height="45dp"
+				android:gravity="center"
+				android:textSize="16sp"
+				android:textColor="#176444"
+				android:text="@string/seat"/>
+	        
+	        <TextView
+	            android:id="@+id/textview_heroes_list_rank"
+				android:layout_width="0dp" 
+				android:layout_weight="1"
+				android:layout_height="45dp"
+				android:gravity="center"
+				android:textSize="16sp"
+				android:textColor="#176444"
+				android:text="@string/rank"/>
+	        
+	    </LinearLayout>
+	
+		<GridView
+	        android:id="@+id/gridview_heroes_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginTop="45dp"
+	        android:numColumns="1"
+	        android:verticalSpacing="0dp"
+	        android:background="@null"/>
+		
+		<TextView
+			android:id="@+id/textview_heroes_list_error"
+			android:layout_width="match_parent" 
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:textSize="16sp"
+			android:textColor="#939393"
+			android:text="@string/heroes_list_error"/>
+=
+	</RelativeLayout>
+
+	<!-- 英雄信息布局 -->
+    <RelativeLayout 
+        android:id="@+id/relativelayout_heroes_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#151515"
+        android:visibility="gone">
+		
+        <TextView
+            android:id="@+id/textview_heroes_name"
+			android:layout_width="match_parent" 
+			android:layout_height="45dp"
+			android:textSize="16sp"
+			android:textColor="#f7f7f7"
+			android:gravity="center"
+			android:background="@drawable/div_style_top"/>
+        
+		<TextView
+            android:id="@+id/textview_heroes_info"
+			android:layout_width="wrap_content" 
+			android:layout_height="45dp"
+			android:layout_marginRight="20dp"
+			android:layout_alignParentRight="true"
+			android:textSize="16sp"
+			android:textColor="#176444"
+			android:gravity="center"/>
+
+		<RelativeLayout
+		    android:id="@+id/relativelayout_heroes_info_basic"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="45dp">
+	        
+			<RelativeLayout
+			    android:id="@+id/relativelayout_heroes_info_basic_00"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@drawable/div_style_00">
+				
+			    <ImageView 
+					android:id="@+id/imageview_heroes_img"
+					android:layout_width="45dp"
+					android:layout_height="45dp"
+					android:layout_marginLeft="20dp"
+					android:layout_marginTop="6dp"
+					android:layout_marginBottom="6dp"/>
+			    
+		    	<TextView
+					android:id="@+id/textview_heroes_nick"
+					android:layout_width="match_parent" 
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="7dp"
+					android:layout_marginTop="4dp"
+					android:textSize="16sp"
+					android:textColor="#f7f7f7"
+					android:layout_toRightOf="@+id/imageview_heroes_img"/>
+		    	
+	    		<TextView
+					android:id="@+id/textview_heroes_tag"
+					android:layout_width="match_parent" 
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="7dp"
+					android:layout_marginTop="32dp"
+					android:textSize="14sp"
+					android:textColor="#939393"
+					android:layout_toRightOf="@+id/imageview_heroes_img"/>
+	    		
+				<TextView
+					android:id="@+id/textview_heroes_money"
+					android:layout_width="match_parent" 
+					android:layout_height="wrap_content"
+					android:layout_marginTop="4dp"
+					android:layout_marginRight="20dp"
+					android:textSize="16sp"
+					android:textColor="#f7f7f7"
+					android:gravity="right"/>
+	    		    		
+				<TextView
+					android:id="@+id/textview_heroes_coin"
+					android:layout_width="match_parent" 
+					android:layout_height="wrap_content"
+					android:layout_marginTop="28dp"
+					android:layout_marginRight="20dp"
+					android:textSize="16sp"
+					android:textColor="#f7f7f7"
+					android:gravity="right"/>
+	
+			</RelativeLayout>
+	        
+			<RelativeLayout 
+			    android:id="@+id/relativelayout_heroes_info_basic_01"
+				android:layout_width="match_parent"
+				android:layout_height="24dp"
+				android:background="@drawable/div_style_01"
+				android:layout_below="@+id/relativelayout_heroes_info_basic_00">
+				
+			    <ImageView 
+			        android:id="@+id/imageview_heroes_attack"
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:alpha="0.3"
+					android:background="@drawable/div_style_attack"/>
+	
+	   			<TextView
+					android:layout_width="match_parent" 
+					android:layout_height="20dp"
+					android:layout_marginTop="1dp"
+					android:layout_marginBottom="2dp"
+					android:layout_marginRight="10dp"
+					android:textSize="14sp"
+					android:textColor="#939393"
+					android:text="@string/attack"
+					android:gravity="right"/>
+	
+			</RelativeLayout>
+			
+			<RelativeLayout 
+			    android:id="@+id/relativelayout_heroes_info_basic_02"
+				android:layout_width="match_parent"
+				android:layout_height="24dp"
+				android:background="@drawable/div_style_00"
+				android:layout_below="@+id/relativelayout_heroes_info_basic_01">
+				
+			    <ImageView 
+			        android:id="@+id/imageview_heroes_magic"
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:alpha="0.3"
+					android:background="@drawable/div_style_magic"/>
+	
+	   			<TextView
+					android:layout_width="match_parent" 
+					android:layout_height="20dp"
+					android:layout_marginTop="1dp"
+					android:layout_marginBottom="2dp"
+					android:layout_marginRight="10dp"
+					android:textSize="14sp"
+					android:textColor="#939393"
+					android:text="@string/magic"
+					android:gravity="right"/>
+	
+			</RelativeLayout>
+			
+			<RelativeLayout 
+			    android:id="@+id/relativelayout_heroes_info_basic_03"
+				android:layout_width="match_parent"
+				android:layout_height="24dp"
+				android:background="@drawable/div_style_01"
+				android:layout_below="@+id/relativelayout_heroes_info_basic_02">
+				
+			    <ImageView 
+			        android:id="@+id/imageview_heroes_defense"
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:layout_marginTop="2dp"
+					android:layout_marginBottom="4dp"
+					android:alpha="0.3"
+					android:background="@drawable/div_style_defense"/>
+	
+	   			<TextView
+					android:layout_width="match_parent" 
+					android:layout_height="20dp"
+					android:layout_marginTop="1dp"
+					android:layout_marginBottom="2dp"
+					android:layout_marginRight="10dp"
+					android:textSize="14sp"
+					android:textColor="#939393"
+					android:text="@string/defense"
+					android:gravity="right"/>
+	
+			</RelativeLayout>
+			
+			<RelativeLayout 
+			    android:id="@+id/relativelayout_heroes_info_basic_04"
+				android:layout_width="match_parent"
+				android:layout_height="24dp"
+				android:background="@drawable/div_style_00"
+				android:layout_below="@+id/relativelayout_heroes_info_basic_03">
+				
+			    <ImageView 
+			        android:id="@+id/imageview_heroes_difficulty"
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:layout_marginTop="2dp"
+					android:layout_marginBottom="4dp"
+					android:alpha="0.3"
+					android:background="@drawable/div_style_difficulty"/>
+	
+	   			<TextView
+					android:layout_width="match_parent" 
+					android:layout_height="20dp"
+					android:layout_marginTop="1dp"
+					android:layout_marginBottom="2dp"
+					android:layout_marginRight="10dp"
+					android:textSize="14sp"
+					android:textColor="#939393"
+					android:text="@string/difficulty"
+					android:gravity="right"/>
+	
+			</RelativeLayout>
+			
+			<RelativeLayout 
+			    android:id="@+id/relativelayout_heroes_info_basic_05"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@drawable/div_style_01"
+				android:layout_below="@+id/relativelayout_heroes_info_basic_04">
+			    
+				<ImageView 
+					android:id="@+id/imageview_heroes_skill1"
+					android:layout_width="45dp"
+					android:layout_height="45dp"
+					android:layout_marginRight="15dp"
+					android:layout_marginTop="6dp"
+					android:layout_toLeftOf="@+id/imageview_heroes_skill2"/>
+				
+				<ImageView 
+					android:id="@+id/imageview_heroes_skill2"
+					android:layout_width="45dp"
+					android:layout_height="45dp"
+					android:layout_marginRight="15dp"
+					android:layout_marginTop="6dp"
+					android:layout_toLeftOf="@+id/imageview_heroes_skill3"/>
+			    			
+				<ImageView 
+					android:id="@+id/imageview_heroes_skill3"
+					android:layout_width="45dp"
+					android:layout_height="45dp"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="6dp"
+					android:layout_marginBottom="6dp"/>
+							
+				<ImageView 
+					android:id="@+id/imageview_heroes_skill4"
+					android:layout_width="45dp"
+					android:layout_height="45dp"
+					android:layout_marginLeft="15dp"
+					android:layout_marginTop="6dp"
+					android:layout_toRightOf="@+id/imageview_heroes_skill3"/>
+							
+				<ImageView 
+					android:id="@+id/imageview_heroes_skill5"
+					android:layout_width="45dp"
+					android:layout_height="45dp"
+					android:layout_marginLeft="15dp"
+					android:layout_marginTop="6dp"
+				    android:layout_toRightOf="@+id/imageview_heroes_skill4"/>
+			    
+				<TextView
+				    android:id="@+id/textview_heroes_skill"
+					android:layout_width="match_parent" 
+					android:layout_height="wrap_content"
+					android:paddingLeft="11dp"
+					android:layout_marginTop="2dp"
+					android:paddingBottom="5dp"
+					android:textSize="16sp"
+					android:textColor="#f7f7f7"
+					android:background="@drawable/div_style_01"
+					android:layout_below="@+id/imageview_heroes_skill3"/>
+	
+				<WebView 
+			        android:id="@+id/webview_heroes_skill_desc"
+			        android:layout_width="match_parent" 
+					android:layout_height="wrap_content"
+					android:layout_marginTop="2dp"
+					android:layout_marginLeft="3dp"
+					android:layout_marginBottom="2dp"
+					android:layout_below="@+id/textview_heroes_skill"/>
+	
+			</RelativeLayout>
+
+		</RelativeLayout>
+		
+		<RelativeLayout
+		    android:id="@+id/relativelayout_heroes_info_use_skill"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="45dp">
+
+		   <TextView
+		        android:id="@+id/textview_heroes_op_skill"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:padding="7dp"
+				android:textSize="14sp"
+				android:textColor="#f7f7f7"
+				android:background="@drawable/div_style_00"/>
+
+		   <TextView
+		        android:id="@+id/textview_heroes_teamwork"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:padding="7dp"
+				android:textSize="14sp"
+				android:textColor="#f7f7f7"
+				android:layout_below="@+id/textview_heroes_op_skill"
+				android:background="@drawable/div_style_01"/>
+		   
+		 	<TextView
+		        android:id="@+id/textview_heroes_use_skuill"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:padding="7dp"
+				android:textSize="14sp"
+				android:textColor="#f7f7f7"
+				android:layout_below="@+id/textview_heroes_teamwork"
+				android:background="@drawable/div_style_00"/>
+		 	
+		 	<TextView
+		        android:id="@+id/textview_heroes_ag_skill"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:padding="7dp"
+				android:textSize="14sp"
+				android:textColor="#f7f7f7"
+				android:layout_below="@+id/textview_heroes_use_skuill"
+				android:background="@drawable/div_style_01"/>
+
+		</RelativeLayout>
+		
+        <WebView 
+	        android:id="@+id/webview_heroes_story"
+	        android:layout_width="match_parent" 
+			android:layout_height="match_parent"
+			android:layout_marginTop="45dp"
+			android:visibility="invisible"/>
+
+	</RelativeLayout>
+
+	<RelativeLayout 
+        android:id="@+id/relativelayout_heroes_info_touch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"/>
+
+	<GridView
+        android:id="@+id/gridview_heroes_list_type_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:paddingTop="5dp"
+        android:numColumns="3"
+        android:background="#070707"
+        android:visibility="gone"/>
+		
+	<GridView
+        android:id="@+id/gridview_heroes_list_seat_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:paddingTop="5dp"
+        android:numColumns="3"
+        android:background="#070707"
+        android:visibility="gone"/>
+			
+	<GridView
+        android:id="@+id/gridview_heroes_list_rank_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:paddingTop="5dp"
+        android:numColumns="3"
+        android:background="#070707"
+        android:visibility="gone"/>
+		
+    <GridView
+        android:id="@+id/gridview_heroes_info_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:paddingTop="5dp"
+        android:numColumns="3"
+        android:background="#070707"
+        android:visibility="gone"/>
+
+</RelativeLayout>
